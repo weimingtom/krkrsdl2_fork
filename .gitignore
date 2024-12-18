@@ -5,7 +5,7 @@ build_*/krkrsdl2
 build/krkrsdl2
 *.a
 *.exe
-*.7z
+#*.7z
 build-*
 build_*
 build
@@ -38,7 +38,7 @@ mono_crash.*
 [Rr]eleases/
 x64/
 x86/
-[Ww][Ii][Nn]32/
+#[Ww][Ii][Nn]32/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/

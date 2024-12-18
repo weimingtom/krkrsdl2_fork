@@ -1,0 +1,1790 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9FEA96FD-D6F6-4BF0-842E-B8D292EE1ABC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>krkrsdl2</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;TVP_OPUS_DECODER_IMPLEMENT;TVP_LOG_TO_COMMANDLINE_CONSOLE;HAVE_CONFIG_H;FT2_BUILD_LIBRARY;USE_ALLOCA;OPUS_BUILD;HAVE_LRINTF;HAVE_LRINT;FLOAT_APPROX;PNG_ARM_NEON_OPT=0;__WIN32__;NO_STRICT;____TJS_TEXT_OUT_CRLF;____TJS_JP_LOCALIZED;____TJS_DEBUG_DUMP_STRING;_CRT_SECURE_NO_WARNING;____TVP_REPORT_HW_EXCEPTION;____TVP_ENABLE_EXECUTE_AT_EXCEPTION;DECLSPEC=;ONIG_EXTERN=;ENABLE_DEBUG_BREAK=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4996;4819</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>../../src/core/base/sdl2;../../src/core/environ/sdl2;../../src/core/msg/sdl2;../../src/core/sdl2;../../src/core/sound/sdl2;../../src/core/utils/sdl2;../../src/core/visual/sdl2;../../external;../../external/krkrz;../../external/krkrz/base;../../external/krkrz/environ;../../external/krkrz/extension;../../external/krkrz/msg;../../external/krkrz/sound;../../external/krkrz/tjs2;../../external/krkrz/utils;../../external/krkrz/visual;../../external/krkrz/visual/IA32;../../external/krkrz/visual/gl;../../external/krkrz/visual/opengl;../../external/krkrz/external;../../external/krkrz/external/freetype/include;../../external/krkrz/external/freetype/src;../../external/krkrz/external/libjpeg-turbo;../../external/krkrz/external/libogg/include;../../external/krkrz/external/lpng;../../external/krkrz/external/onig/src;../../external/krkrz/external/opus/celt;../../external/krkrz/external/opus/include;../../external/krkrz/external/opus/silk;../../external/krkrz/external/opus/silk/fixed;../../external/krkrz/external/opus/silk/float;../../external/krkrz/external/opusfile/include;../../external/krkrz/external/opusfile/src;../../external/simde;../../external/zlib;../../src/config;../../src/plugins;../../external/SDL/include;../../external/krkrz/vcproj;../../external/krglhwebp/libwebp/src;../../external/krglhwebp/libwebp;../../external/krglhwebp/libwebp_config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>imm32.lib;version.lib;winmm.lib;dxguid.lib;setupapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\external\KAGParser\KAGParser.cpp" />
+    <ClCompile Include="..\..\external\KAGParser\Main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krglhwebp\dllmain.cpp" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dec\alpha_dec.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dec\buffer_dec.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dec\frame_dec.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dec\idec_dec.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dec\io_dec.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dec\quant_dec.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dec\tree_dec.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dec\vp8l_dec.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dec\vp8_dec.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dec\webp_dec.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\alpha_processing.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\alpha_processing_mips_dsp_r2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\alpha_processing_neon.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\alpha_processing_sse2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\alpha_processing_sse41.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\cost.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\cost_mips32.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\cost_mips_dsp_r2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\cost_neon.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\cost_sse2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\cpu.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\dec.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\dec_clip_tables.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\dec_mips32.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\dec_mips_dsp_r2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\dec_msa.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\dec_neon.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\dec_sse2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\dec_sse41.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\enc_mips32.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\enc_mips_dsp_r2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\enc_msa.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\enc_neon.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\enc_sse2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\enc_sse41.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\filters.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\filters_mips_dsp_r2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\filters_msa.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\filters_neon.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\filters_sse2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\lossless.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\lossless_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\lossless_enc_mips32.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\lossless_enc_mips_dsp_r2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\lossless_enc_msa.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\lossless_enc_neon.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\lossless_enc_sse2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\lossless_enc_sse41.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\lossless_mips_dsp_r2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\lossless_msa.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\lossless_neon.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\lossless_sse2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\rescaler.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\rescaler_mips32.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\rescaler_mips_dsp_r2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\rescaler_msa.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\rescaler_neon.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\rescaler_sse2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\ssim.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\ssim_sse2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\upsampling.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\upsampling_mips_dsp_r2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\upsampling_msa.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\upsampling_neon.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\upsampling_sse2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\upsampling_sse41.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\yuv.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\yuv_mips32.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\yuv_mips_dsp_r2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\yuv_neon.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\yuv_sse2.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\dsp\yuv_sse41.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\alpha_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\analysis_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\backward_references_cost_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\backward_references_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\config_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\cost_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\filter_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\frame_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\histogram_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\iterator_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\near_lossless_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\picture_csp_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\picture_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\picture_psnr_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\picture_rescale_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\picture_tools_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\predictor_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\quant_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\syntax_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\token_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\tree_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\vp8l_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\enc\webp_enc.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\utils\bit_reader_utils.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\utils\bit_writer_utils.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\utils\color_cache_utils.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\utils\filters_utils.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\utils\huffman_encode_utils.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\utils\huffman_utils.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\utils\quant_levels_dec_utils.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\utils\quant_levels_utils.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\utils\random_utils.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\utils\rescaler_utils.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\utils\thread_utils.c" />
+    <ClCompile Include="..\..\external\krglhwebp\libwebp\src\utils\utils.c" />
+    <ClCompile Include="..\..\external\krkrz\base\BinaryStream.cpp" />
+    <ClCompile Include="..\..\external\krkrz\base\CharacterSet.cpp" />
+    <ClCompile Include="..\..\external\krkrz\base\EventIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\base\PluginIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\base\ScriptMgnIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\base\StorageIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\base\SysInitIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\base\SystemIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\base\TextStream.cpp" />
+    <ClCompile Include="..\..\external\krkrz\base\UtilStreams.cpp" />
+    <ClCompile Include="..\..\external\krkrz\base\XP3Archive.cpp" />
+    <ClCompile Include="..\..\external\krkrz\extension\Extension.cpp" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\autofit\autofit.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\basepic.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftadvanc.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftapi.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftbase.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftbbox.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftbdf.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftbitmap.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftcalc.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftcid.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftdbgmem.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftdebug.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftfntfmt.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftfstype.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftgasp.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftgloadr.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftglyph.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftgxval.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\fthash.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftinit.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftlcdfil.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftmac.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftmm.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftobjs.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftotval.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftoutln.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftpatent.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftpfr.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftpic.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftrfork.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftsnames.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftstream.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftstroke.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftsynth.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftsystem.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\fttrigon.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\fttype1.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftutil.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\base\ftwinfnt.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\bdf\bdf.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\cache\ftcache.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\cff\cff.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\cid\type1cid.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\gzip\ftgzip.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\lzw\ftlzw.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\pcf\pcf.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\pfr\pfr.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\psaux\psaux.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\pshinter\pshinter.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\psnames\psmodule.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\raster\raster.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\sfnt\sfnt.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\smooth\smooth.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\truetype\truetype.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\type1\type1.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\type42\type42.c" />
+    <ClCompile Include="..\..\external\krkrz\external\freetype\src\winfonts\winfnt.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\bmp.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\cdjpeg.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\cjpeg.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\djpeg.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jaricom.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jcapimin.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jcapistd.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jcarith.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jccoefct.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jccolext.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jccolor.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jcdctmgr.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jchuff.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jcinit.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jcmainct.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jcmarker.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jcmaster.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jcomapi.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jcparam.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jcphuff.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jcprepct.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jcsample.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jcstest.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jctrans.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdapimin.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdapistd.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdarith.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdatadst-tj.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdatadst.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdatasrc-tj.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdatasrc.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdcoefct.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdcol565.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdcolext.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdcolor.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jddctmgr.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdhuff.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdinput.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdmainct.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdmarker.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdmaster.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdmerge.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdmrg565.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdmrgext.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdphuff.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdpostct.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdsample.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jdtrans.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jerror.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jfdctflt.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jfdctfst.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jfdctint.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jidctflt.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jidctfst.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jidctint.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jidctred.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jmemmgr.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jmemnobs.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jpegtran.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jquant1.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jquant2.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jsimd_none.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jstdhuff.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\jutils.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\rdbmp.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\rdcolmap.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\rdgif.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\rdjpgcom.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\rdppm.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\rdrle.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\rdswitch.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\rdtarga.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\tjbench.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\tjunittest.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\tjutil.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\transupp.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\turbojpeg-jni.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\turbojpeg.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\wrbmp.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\wrgif.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\wrjpgcom.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\wrppm.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\wrrle.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libjpeg-turbo\wrtarga.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libogg\src\bitwise.c" />
+    <ClCompile Include="..\..\external\krkrz\external\libogg\src\framing.c" />
+    <ClCompile Include="..\..\external\krkrz\external\lpng\png.c" />
+    <ClCompile Include="..\..\external\krkrz\external\lpng\pngerror.c" />
+    <ClCompile Include="..\..\external\krkrz\external\lpng\pngget.c" />
+    <ClCompile Include="..\..\external\krkrz\external\lpng\pngmem.c" />
+    <ClCompile Include="..\..\external\krkrz\external\lpng\pngpread.c" />
+    <ClCompile Include="..\..\external\krkrz\external\lpng\pngread.c" />
+    <ClCompile Include="..\..\external\krkrz\external\lpng\pngrio.c" />
+    <ClCompile Include="..\..\external\krkrz\external\lpng\pngrtran.c" />
+    <ClCompile Include="..\..\external\krkrz\external\lpng\pngrutil.c" />
+    <ClCompile Include="..\..\external\krkrz\external\lpng\pngset.c" />
+    <ClCompile Include="..\..\external\krkrz\external\lpng\pngtest.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\lpng\pngtrans.c" />
+    <ClCompile Include="..\..\external\krkrz\external\lpng\pngwio.c" />
+    <ClCompile Include="..\..\external\krkrz\external\lpng\pngwrite.c" />
+    <ClCompile Include="..\..\external\krkrz\external\lpng\pngwtran.c" />
+    <ClCompile Include="..\..\external\krkrz\external\lpng\pngwutil.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\ascii.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\big5.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\cp1251.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\euc_jp.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\euc_jp_prop.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\euc_kr.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\euc_tw.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\gb18030.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\iso8859_1.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\iso8859_10.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\iso8859_11.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\iso8859_13.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\iso8859_14.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\iso8859_15.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\iso8859_16.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\iso8859_2.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\iso8859_3.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\iso8859_4.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\iso8859_5.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\iso8859_6.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\iso8859_7.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\iso8859_8.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\iso8859_9.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\koi8.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\koi8_r.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\mktable.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\onig_init.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\regcomp.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\regenc.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\regerror.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\regexec.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\regext.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\reggnu.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\regparse.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\regposerr.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\regposix.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\regsyntax.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\regtrav.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\regversion.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\sjis.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\sjis_prop.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\st.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\unicode.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\unicode_fold1_key.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\unicode_fold2_key.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\unicode_fold3_key.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\unicode_fold_data.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\unicode_property_data.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\unicode_property_data_posix.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\unicode_unfold_key.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\utf16_be.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\utf16_le.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\utf32_be.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\utf32_le.c" />
+    <ClCompile Include="..\..\external\krkrz\external\onig\src\utf8.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opusfile\src\http.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opusfile\src\info.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opusfile\src\internal.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opusfile\src\opusfile.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opusfile\src\stream.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opusfile\src\wincerts.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\bands.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\celt.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\celt_decoder.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\celt_encoder.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\celt_lpc.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\cwrs.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\entcode.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\entdec.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\entenc.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\kiss_fft.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\laplace.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\mathops.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\mdct.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\modes.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\opus_custom_demo.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\pitch.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\quant_bands.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\rate.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\celt\vq.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\A2NLSF.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\ana_filt_bank_1.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\biquad_alt.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\bwexpander.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\bwexpander_32.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\check_control_input.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\CNG.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\code_signs.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\control_audio_bandwidth.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\control_codec.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\control_SNR.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\debug.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\decoder_set_fs.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\decode_core.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\decode_frame.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\decode_indices.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\decode_parameters.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\decode_pitch.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\decode_pulses.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\dec_API.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\encode_indices.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\encode_pulses.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\enc_API.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\apply_sine_window_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\autocorrelation_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\burg_modified_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\bwexpander_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\corrMatrix_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\encode_frame_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\energy_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\find_LPC_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\find_LTP_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\find_pitch_lags_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\find_pred_coefs_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\inner_product_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\k2a_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\levinsondurbin_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\LPC_analysis_filter_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\LPC_inv_pred_gain_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\LTP_analysis_filter_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\LTP_scale_ctrl_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\noise_shape_analysis_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\pitch_analysis_core_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\prefilter_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\process_gains_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\regularize_correlations_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\residual_energy_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\scale_copy_vector_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\scale_vector_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\schur_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\solve_LS_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\sort_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\warped_autocorrelation_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\float\wrappers_FLP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\gain_quant.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\HP_variable_cutoff.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\init_decoder.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\init_encoder.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\inner_prod_aligned.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\interpolate.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\lin2log.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\log2lin.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\LPC_analysis_filter.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\LPC_inv_pred_gain.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\LP_variable_cutoff.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\NLSF2A.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\NLSF_decode.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\NLSF_del_dec_quant.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\NLSF_encode.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\NLSF_stabilize.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\NLSF_unpack.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\NLSF_VQ.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\NLSF_VQ_weights_laroia.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\NSQ.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\NSQ_del_dec.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\pitch_est_tables.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\PLC.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\process_NLSFs.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\quant_LTP_gains.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\resampler.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\resampler_down2.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\resampler_down2_3.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\resampler_private_AR2.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\resampler_private_down_FIR.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\resampler_private_IIR_FIR.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\resampler_private_up2_HQ.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\resampler_rom.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\shell_coder.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\sigm_Q15.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\sort.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\stereo_decode_pred.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\stereo_encode_pred.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\stereo_find_predictor.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\stereo_LR_to_MS.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\stereo_MS_to_LR.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\stereo_quant_pred.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\sum_sqr_shift.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\tables_gain.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\tables_LTP.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\tables_NLSF_CB_NB_MB.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\tables_NLSF_CB_WB.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\tables_other.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\tables_pitch_lag.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\tables_pulses_per_block.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\table_LSF_cos.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\VAD.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\silk\VQ_WMat_EC.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\src\analysis.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\src\mlp.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\src\mlp_data.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\src\opus.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\src\opus_compare.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\opus\src\opus_decoder.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\src\opus_demo.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\external\opus\src\opus_encoder.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\src\opus_multistream.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\src\opus_multistream_decoder.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\src\opus_multistream_encoder.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\src\repacketizer.c" />
+    <ClCompile Include="..\..\external\krkrz\external\opus\src\repacketizer_demo.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\msg\MsgIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\sound\MathAlgorithms.cpp" />
+    <ClCompile Include="..\..\external\krkrz\sound\MathAlgorithms_SSE.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\sound\OpusCodecDecoder.cpp" />
+    <ClCompile Include="..\..\external\krkrz\sound\PhaseVocoderDSP.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\sound\PhaseVocoderFilter.cpp" />
+    <ClCompile Include="..\..\external\krkrz\sound\QueueSoundBufferImpl.cpp" />
+    <ClCompile Include="..\..\external\krkrz\sound\RealFFT.cpp" />
+    <ClCompile Include="..\..\external\krkrz\sound\RealFFT_SSE.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\sound\SoundBufferBaseImpl.cpp" />
+    <ClCompile Include="..\..\external\krkrz\sound\SoundBufferBaseIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\sound\SoundDecodeThread.cpp" />
+    <ClCompile Include="..\..\external\krkrz\sound\SoundEventThread.cpp" />
+    <ClCompile Include="..\..\external\krkrz\sound\SoundPlayer.cpp" />
+    <ClCompile Include="..\..\external\krkrz\sound\WaveFormatConverter.cpp" />
+    <ClCompile Include="..\..\external\krkrz\sound\WaveFormatConverter_SSE.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\sound\WaveIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\sound\WaveLoopManager.cpp" />
+    <ClCompile Include="..\..\external\krkrz\sound\WaveSegmentQueue.cpp" />
+    <ClCompile Include="..\..\external\krkrz\sound\xmmlib.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjs.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjs.tab.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsArray.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsBinarySerializer.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsByteCodeLoader.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsCompileControl.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsConfig.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsConstArrayData.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsDate.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsdate.tab.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsDateParser.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsDateWordMap.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsDebug.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsDictionary.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsDisassemble.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsError.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsException.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsGlobalStringMap.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsInterCodeExec.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsInterCodeGen.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsInterface.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsLex.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsMath.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsMessage.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsMT19937ar-cok.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsNamespace.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsNative.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsObject.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsObjectExtendable.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsOctPack.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjspp.tab.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsRandomGenerator.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsRegExp.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsScriptBlock.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsScriptCache.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsSnprintf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsString.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsUtils.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsVariant.cpp" />
+    <ClCompile Include="..\..\external\krkrz\tjs2\tjsVariantString.cpp" />
+    <ClCompile Include="..\..\external\krkrz\utils\ClipboardIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\utils\cp932_uni.cpp" />
+    <ClCompile Include="..\..\external\krkrz\utils\DebugIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\utils\md5.c" />
+    <ClCompile Include="..\..\external\krkrz\utils\MiscUtility.cpp" />
+    <ClCompile Include="..\..\external\krkrz\utils\Random.cpp" />
+    <ClCompile Include="..\..\external\krkrz\utils\ThreadIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\utils\TickCount.cpp" />
+    <ClCompile Include="..\..\external\krkrz\utils\TimerIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\utils\TimerThread.cpp" />
+    <ClCompile Include="..\..\external\krkrz\utils\TVPTimer.cpp" />
+    <ClCompile Include="..\..\external\krkrz\utils\uni_cp932.cpp" />
+    <ClCompile Include="..\..\external\krkrz\utils\VelocityTracker.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\BitmapIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\BitmapLayerTreeOwner.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\CharacterData.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\ComplexRect.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\DrawDevice.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\FontSystem.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\FreeType.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\FreeTypeFontRasterizer.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\gl\adjust_color_sse2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\visual\gl\blend_function.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\gl\blend_function_avx2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\visual\gl\blend_function_sse2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\visual\gl\boxblur_sse2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\visual\gl\colorfill_sse2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\visual\gl\colormap_sse2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\visual\gl\pixelformat_sse2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\visual\gl\ResampleImage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\visual\gl\ResampleImageAVX2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\visual\gl\ResampleImageSSE2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\visual\gl\tlg_sse2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\visual\gl\univtrans_sse2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\visual\gl\WeightFunctor.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\gl\x86simdutil.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\visual\gl\x86simdutilAVX2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\visual\GraphicsLoaderIntf.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\visual\GraphicsLoadThread.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\ImageFunction.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\LayerBitmapImpl.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\visual\LayerBitmapIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\LayerIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\LayerManager.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\LayerTreeOwnerImpl.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\LoadJPEG.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\LoadJXR.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\krkrz\visual\LoadPNG.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\LoadTLG.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\NullDrawDevice.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\PrerenderedFont.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\RectItf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\SaveTLG5.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\SaveTLG6.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\TransIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\tvpgl.c" />
+    <ClCompile Include="..\..\external\krkrz\visual\VideoOvlIntf.cpp" />
+    <ClCompile Include="..\..\external\krkrz\visual\WindowIntf.cpp" />
+    <ClCompile Include="..\..\external\ncbind\ncbind.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\ncbind\testbind.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\atomic\SDL_atomic.c" />
+    <ClCompile Include="..\..\external\SDL\src\atomic\SDL_spinlock.c" />
+    <ClCompile Include="..\..\external\SDL\src\audio\directsound\SDL_directsound.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\audio\disk\SDL_diskaudio.c" />
+    <ClCompile Include="..\..\external\SDL\src\audio\dummy\SDL_dummyaudio.c" />
+    <ClCompile Include="..\..\external\SDL\src\audio\SDL_audio.c" />
+    <ClCompile Include="..\..\external\SDL\src\audio\SDL_audiocvt.c" />
+    <ClCompile Include="..\..\external\SDL\src\audio\SDL_audiodev.c" />
+    <ClCompile Include="..\..\external\SDL\src\audio\SDL_audiotypecvt.c" />
+    <ClCompile Include="..\..\external\SDL\src\audio\SDL_mixer.c" />
+    <ClCompile Include="..\..\external\SDL\src\audio\SDL_wave.c" />
+    <ClCompile Include="..\..\external\SDL\src\audio\wasapi\SDL_wasapi.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\audio\wasapi\SDL_wasapi_win32.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\audio\wasapi\SDL_wasapi_winrt.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\audio\winmm\SDL_winmm.c" />
+    <ClCompile Include="..\..\external\SDL\src\core\windows\SDL_hid.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\core\windows\SDL_windows.c" />
+    <ClCompile Include="..\..\external\SDL\src\core\windows\SDL_xinput.c" />
+    <ClCompile Include="..\..\external\SDL\src\cpuinfo\SDL_cpuinfo.c" />
+    <ClCompile Include="..\..\external\SDL\src\dynapi\SDL_dynapi.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\events\imKStoUCS.c" />
+    <ClCompile Include="..\..\external\SDL\src\events\SDL_clipboardevents.c" />
+    <ClCompile Include="..\..\external\SDL\src\events\SDL_displayevents.c" />
+    <ClCompile Include="..\..\external\SDL\src\events\SDL_dropevents.c" />
+    <ClCompile Include="..\..\external\SDL\src\events\SDL_events.c" />
+    <ClCompile Include="..\..\external\SDL\src\events\SDL_gesture.c" />
+    <ClCompile Include="..\..\external\SDL\src\events\SDL_keyboard.c" />
+    <ClCompile Include="..\..\external\SDL\src\events\SDL_mouse.c" />
+    <ClCompile Include="..\..\external\SDL\src\events\SDL_quit.c" />
+    <ClCompile Include="..\..\external\SDL\src\events\SDL_touch.c" />
+    <ClCompile Include="..\..\external\SDL\src\events\SDL_windowevents.c" />
+    <ClCompile Include="..\..\external\SDL\src\filesystem\windows\SDL_sysfilesystem.c" />
+    <ClCompile Include="..\..\external\SDL\src\file\SDL_rwops.c" />
+    <ClCompile Include="..\..\external\SDL\src\haptic\dummy\SDL_syshaptic.c" />
+    <ClCompile Include="..\..\external\SDL\src\haptic\SDL_haptic.c" />
+    <ClCompile Include="..\..\external\SDL\src\haptic\windows\SDL_dinputhaptic.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\haptic\windows\SDL_windowshaptic.c" />
+    <ClCompile Include="..\..\external\SDL\src\haptic\windows\SDL_xinputhaptic.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\hidapi\windows\hid.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\joystick\dummy\SDL_sysjoystick.c" />
+    <ClCompile Include="..\..\external\SDL\src\joystick\hidapi\SDL_hidapijoystick.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\joystick\hidapi\SDL_hidapi_gamecube.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\joystick\hidapi\SDL_hidapi_luna.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\joystick\hidapi\SDL_hidapi_ps4.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\joystick\hidapi\SDL_hidapi_ps5.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\joystick\hidapi\SDL_hidapi_rumble.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\joystick\hidapi\SDL_hidapi_stadia.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\joystick\hidapi\SDL_hidapi_steam.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\joystick\hidapi\SDL_hidapi_switch.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\joystick\hidapi\SDL_hidapi_xbox360.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\joystick\hidapi\SDL_hidapi_xbox360w.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\joystick\hidapi\SDL_hidapi_xboxone.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\joystick\SDL_gamecontroller.c" />
+    <ClCompile Include="..\..\external\SDL\src\joystick\SDL_joystick.c" />
+    <ClCompile Include="..\..\external\SDL\src\joystick\windows\SDL_dinputjoystick.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\joystick\windows\SDL_rawinputjoystick.c" />
+    <ClCompile Include="..\..\external\SDL\src\joystick\windows\SDL_windowsjoystick.c" />
+    <ClCompile Include="..\..\external\SDL\src\joystick\windows\SDL_windows_gaming_input.c" />
+    <ClCompile Include="..\..\external\SDL\src\joystick\windows\SDL_xinputjoystick.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\libm\e_atan2.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\e_exp.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\e_fmod.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\e_log.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\e_log10.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\e_pow.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\e_rem_pio2.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\e_sqrt.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\k_cos.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\k_rem_pio2.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\k_sin.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\k_tan.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\s_atan.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\s_copysign.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\s_cos.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\s_fabs.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\s_floor.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\s_scalbn.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\s_sin.c" />
+    <ClCompile Include="..\..\external\SDL\src\libm\s_tan.c" />
+    <ClCompile Include="..\..\external\SDL\src\loadso\windows\SDL_sysloadso.c" />
+    <ClCompile Include="..\..\external\SDL\src\main\windows\SDL_windows_main.c" />
+    <ClCompile Include="..\..\external\SDL\src\power\SDL_power.c" />
+    <ClCompile Include="..\..\external\SDL\src\power\windows\SDL_syspower.c" />
+    <ClCompile Include="..\..\external\SDL\src\render\direct3d11\SDL_render_d3d11.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\render\direct3d11\SDL_render_winrt.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\render\direct3d11\SDL_shaders_d3d11.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\render\direct3d\SDL_render_d3d.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\render\direct3d\SDL_shaders_d3d.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\render\opengles2\SDL_render_gles2.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\render\opengles2\SDL_shaders_gles2.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\external\SDL\src\render\opengles\SDL_render_gles.c" />
+    <ClCompile Include="..\..\external\SDL\src\render\opengl\SDL_render_gl.c" />
+    <ClCompile Include="..\..\external\SDL\src\render\opengl\SDL_shaders_gl.c" />
+    <ClCompile Include="..\..\external\SDL\src\render\SDL_d3dmath.c" />
+    <ClCompile Include="..\..\external\SDL\src\render\SDL_render.c" />
+    <ClCompile Include="..\..\external\SDL\src\render\SDL_yuv_sw.c" />
+    <ClCompile Include="..\..\external\SDL\src\render\software\SDL_blendfillrect.c" />
+    <ClCompile Include="..\..\external\SDL\src\render\software\SDL_blendline.c" />
+    <ClCompile Include="..\..\external\SDL\src\render\software\SDL_blendpoint.c" />
+    <ClCompile Include="..\..\external\SDL\src\render\software\SDL_drawline.c" />
+    <ClCompile Include="..\..\external\SDL\src\render\software\SDL_drawpoint.c" />
+    <ClCompile Include="..\..\external\SDL\src\render\software\SDL_render_sw.c" />
+    <ClCompile Include="..\..\external\SDL\src\render\software\SDL_rotate.c" />
+    <ClCompile Include="..\..\external\SDL\src\render\software\SDL_triangle.c" />
+    <ClCompile Include="..\..\external\SDL\src\SDL.c" />
+    <ClCompile Include="..\..\external\SDL\src\SDL_assert.c" />
+    <ClCompile Include="..\..\external\SDL\src\SDL_dataqueue.c" />
+    <ClCompile Include="..\..\external\SDL\src\SDL_error.c" />
+    <ClCompile Include="..\..\external\SDL\src\SDL_hints.c" />
+    <ClCompile Include="..\..\external\SDL\src\SDL_log.c" />
+    <ClCompile Include="..\..\external\SDL\src\sensor\dummy\SDL_dummysensor.c" />
+    <ClCompile Include="..\..\external\SDL\src\sensor\SDL_sensor.c" />
+    <ClCompile Include="..\..\external\SDL\src\stdlib\SDL_crc32.c" />
+    <ClCompile Include="..\..\external\SDL\src\stdlib\SDL_getenv.c" />
+    <ClCompile Include="..\..\external\SDL\src\stdlib\SDL_iconv.c" />
+    <ClCompile Include="..\..\external\SDL\src\stdlib\SDL_malloc.c" />
+    <ClCompile Include="..\..\external\SDL\src\stdlib\SDL_qsort.c" />
+    <ClCompile Include="..\..\external\SDL\src\stdlib\SDL_stdlib.c" />
+    <ClCompile Include="..\..\external\SDL\src\stdlib\SDL_string.c" />
+    <ClCompile Include="..\..\external\SDL\src\stdlib\SDL_strtokr.c" />
+    <ClCompile Include="..\..\external\SDL\src\thread\generic\SDL_syscond.c" />
+    <ClCompile Include="..\..\external\SDL\src\thread\SDL_thread.c" />
+    <ClCompile Include="..\..\external\SDL\src\thread\windows\SDL_syscond_cv.c" />
+    <ClCompile Include="..\..\external\SDL\src\thread\windows\SDL_sysmutex.c" />
+    <ClCompile Include="..\..\external\SDL\src\thread\windows\SDL_syssem.c" />
+    <ClCompile Include="..\..\external\SDL\src\thread\windows\SDL_systhread.c" />
+    <ClCompile Include="..\..\external\SDL\src\thread\windows\SDL_systls.c" />
+    <ClCompile Include="..\..\external\SDL\src\timer\SDL_timer.c" />
+    <ClCompile Include="..\..\external\SDL\src\timer\windows\SDL_systimer.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\dummy\SDL_nullevents.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\dummy\SDL_nullframebuffer.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\dummy\SDL_nullvideo.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_blit.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_blit_0.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_blit_1.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_blit_A.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_blit_auto.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_blit_copy.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_blit_N.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_blit_slow.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_bmp.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_clipboard.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_egl.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_fillrect.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_pixels.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_rect.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_RLEaccel.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_shape.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_stretch.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_surface.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_video.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_vulkan_utils.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\SDL_yuv.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\windows\SDL_windowsclipboard.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\windows\SDL_windowsevents.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\windows\SDL_windowsframebuffer.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\windows\SDL_windowskeyboard.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\windows\SDL_windowsmessagebox.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\windows\SDL_windowsmodes.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\windows\SDL_windowsmouse.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\windows\SDL_windowsopengl.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\windows\SDL_windowsopengles.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\windows\SDL_windowsshape.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\windows\SDL_windowsvideo.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\windows\SDL_windowsvulkan.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\windows\SDL_windowswindow.c" />
+    <ClCompile Include="..\..\external\SDL\src\video\yuv2rgb\yuv_rgb.c" />
+    <ClCompile Include="..\..\external\zlib\adler32.c" />
+    <ClCompile Include="..\..\external\zlib\compress.c" />
+    <ClCompile Include="..\..\external\zlib\crc32.c" />
+    <ClCompile Include="..\..\external\zlib\deflate.c" />
+    <ClCompile Include="..\..\external\zlib\gzclose.c" />
+    <ClCompile Include="..\..\external\zlib\gzlib.c" />
+    <ClCompile Include="..\..\external\zlib\gzread.c" />
+    <ClCompile Include="..\..\external\zlib\gzwrite.c" />
+    <ClCompile Include="..\..\external\zlib\infback.c" />
+    <ClCompile Include="..\..\external\zlib\inffast.c" />
+    <ClCompile Include="..\..\external\zlib\inflate.c" />
+    <ClCompile Include="..\..\external\zlib\inftrees.c" />
+    <ClCompile Include="..\..\external\zlib\trees.c" />
+    <ClCompile Include="..\..\external\zlib\uncompr.c" />
+    <ClCompile Include="..\..\external\zlib\zutil.c" />
+    <ClCompile Include="..\..\src\core\base\sdl2\AndroidAssetManager.c" />
+    <ClCompile Include="..\..\src\core\base\sdl2\EventImpl.cpp" />
+    <ClCompile Include="..\..\src\core\base\sdl2\FileSelector.cpp" />
+    <ClCompile Include="..\..\src\core\base\sdl2\FuncStubs.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\base\sdl2\NativeEventQueue.cpp" />
+    <ClCompile Include="..\..\src\core\base\sdl2\PluginImpl.cpp" />
+    <ClCompile Include="..\..\src\core\base\sdl2\ScriptMgnImpl.cpp" />
+    <ClCompile Include="..\..\src\core\base\sdl2\StorageImpl.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\base\sdl2\SysInitImpl.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\base\sdl2\SystemImpl.cpp" />
+    <ClCompile Include="..\..\src\core\environ\sdl2\Application.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\environ\sdl2\DetectCPU.cpp" />
+    <ClCompile Include="..\..\src\core\environ\sdl2\SystemControl.cpp" />
+    <ClCompile Include="..\..\src\core\msg\sdl2\MsgImpl.cpp" />
+    <ClCompile Include="..\..\src\core\msg\sdl2\MsgLoad.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\sdl2\SDLApplication.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\sdl2\SDLBitmapCompletion.cpp" />
+    <ClCompile Include="..\..\src\core\sound\sdl2\WaveImpl.cpp" />
+    <ClCompile Include="..\..\src\core\sound\sdl2\WaveMixer.cpp" />
+    <ClCompile Include="..\..\src\core\utils\sdl2\ClipboardImpl.cpp" />
+    <ClCompile Include="..\..\src\core\visual\sdl2\BasicDrawDevice.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\visual\sdl2\BitmapBitsAlloc.cpp" />
+    <ClCompile Include="..\..\src\core\visual\sdl2\BitmapInfomation.cpp" />
+    <ClCompile Include="..\..\src\core\visual\sdl2\GraphicsLoaderImpl.cpp" />
+    <ClCompile Include="..\..\src\core\visual\sdl2\LayerImpl.cpp" />
+    <ClCompile Include="..\..\src\core\visual\sdl2\opengl\OpenGLPlatformSDL2.cpp" />
+    <ClCompile Include="..\..\src\core\visual\sdl2\opengl\OpenGLScreenSDL2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\visual\sdl2\TVPScreen.cpp" />
+    <ClCompile Include="..\..\src\core\visual\sdl2\VideoOvlImpl.cpp" />
+    <ClCompile Include="..\..\src\core\visual\sdl2\WindowImpl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\external\KAGParser\KAGParser.h" />
+    <ClInclude Include="..\..\external\KAGParser\tjsHashSearch.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\dec\alphai_dec.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\dec\common_dec.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\dec\vp8i_dec.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\dec\vp8li_dec.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\dec\vp8_dec.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\dec\webpi_dec.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\dsp\common_sse2.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\dsp\common_sse41.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\dsp\dsp.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\dsp\lossless.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\dsp\lossless_common.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\dsp\mips_macro.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\dsp\msa_macro.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\dsp\neon.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\dsp\quant.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\dsp\yuv.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\enc\backward_references_enc.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\enc\cost_enc.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\enc\histogram_enc.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\enc\vp8i_enc.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\enc\vp8li_enc.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\utils\bit_reader_inl_utils.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\utils\bit_reader_utils.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\utils\bit_writer_utils.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\utils\color_cache_utils.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\utils\endian_inl_utils.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\utils\filters_utils.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\utils\huffman_encode_utils.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\utils\huffman_utils.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\utils\quant_levels_dec_utils.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\utils\quant_levels_utils.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\utils\random_utils.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\utils\rescaler_utils.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\utils\thread_utils.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\utils\utils.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\webp\decode.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\webp\demux.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\webp\encode.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\webp\format_constants.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\webp\mux.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\webp\mux_types.h" />
+    <ClInclude Include="..\..\external\krglhwebp\libwebp\src\webp\types.h" />
+    <ClInclude Include="..\..\external\krkrz\base\BinaryStream.h" />
+    <ClInclude Include="..\..\external\krkrz\base\CharacterSet.h" />
+    <ClInclude Include="..\..\external\krkrz\base\EventIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\base\PluginIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\base\ScriptMgnIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\base\StorageIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\base\SysInitIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\base\SystemIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\base\TextStream.h" />
+    <ClInclude Include="..\..\external\krkrz\base\UserEvent.h" />
+    <ClInclude Include="..\..\external\krkrz\base\UtilStreams.h" />
+    <ClInclude Include="..\..\external\krkrz\base\XP3Archive.h" />
+    <ClInclude Include="..\..\external\krkrz\extension\Extension.h" />
+    <ClInclude Include="..\..\external\krkrz\external\freetype\src\autofit\afstyles.h" />
+    <ClInclude Include="..\..\external\krkrz\external\freetype\src\base\basepic.h" />
+    <ClInclude Include="..\..\external\krkrz\external\freetype\src\base\ftbase.h" />
+    <ClInclude Include="..\..\external\krkrz\external\freetype\src\base\md5.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\bmp.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\cderror.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\cdjpeg.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jchuff.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jdcoefct.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jdct.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jdhuff.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jdmainct.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jdmaster.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jdsample.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jerror.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jinclude.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jmemsys.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jmorecfg.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jpegcomp.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jpegint.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jpeglib.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jpeg_nbits_table.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jsimd.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jsimddct.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\jversion.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\tjutil.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\transupp.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\turbojpeg.h" />
+    <ClInclude Include="..\..\external\krkrz\external\libjpeg-turbo\wrppm.h" />
+    <ClInclude Include="..\..\external\krkrz\external\lpng\png.h" />
+    <ClInclude Include="..\..\external\krkrz\external\lpng\pngconf.h" />
+    <ClInclude Include="..\..\external\krkrz\external\lpng\pngdebug.h" />
+    <ClInclude Include="..\..\external\krkrz\external\lpng\pnginfo.h" />
+    <ClInclude Include="..\..\external\krkrz\external\lpng\pnglibconf.h" />
+    <ClInclude Include="..\..\external\krkrz\external\lpng\pngpriv.h" />
+    <ClInclude Include="..\..\external\krkrz\external\lpng\pngstruct.h" />
+    <ClInclude Include="..\..\external\krkrz\external\onig\src\oniggnu.h" />
+    <ClInclude Include="..\..\external\krkrz\external\onig\src\onigposix.h" />
+    <ClInclude Include="..\..\external\krkrz\external\onig\src\oniguruma.h" />
+    <ClInclude Include="..\..\external\krkrz\external\onig\src\regenc.h" />
+    <ClInclude Include="..\..\external\krkrz\external\onig\src\regint.h" />
+    <ClInclude Include="..\..\external\krkrz\external\onig\src\regparse.h" />
+    <ClInclude Include="..\..\external\krkrz\external\onig\src\st.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opusfile\src\internal.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opusfile\src\winerrno.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\arch.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\bands.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\celt.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\celt_lpc.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\cpu_support.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\cwrs.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\ecintrin.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\entcode.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\entdec.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\entenc.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\fixed_debug.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\fixed_generic.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\float_cast.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\kiss_fft.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\laplace.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\mathops.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\mdct.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\mfrngcod.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\modes.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\os_support.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\pitch.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\quant_bands.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\rate.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\stack_alloc.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\static_modes_fixed.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\static_modes_fixed_arm_ne10.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\static_modes_float.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\static_modes_float_arm_ne10.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\vq.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\celt\_kiss_fft_guts.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\API.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\control.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\debug.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\define.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\errors.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\float\main_FLP.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\float\SigProc_FLP.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\float\structs_FLP.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\Inlines.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\MacroCount.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\MacroDebug.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\macros.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\main.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\NSQ.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\pitch_est_defines.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\PLC.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\resampler_private.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\resampler_rom.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\resampler_structs.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\SigProc_FIX.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\structs.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\tables.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\tuning_parameters.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\silk\typedef.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\src\analysis.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\src\mlp.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\src\opus_private.h" />
+    <ClInclude Include="..\..\external\krkrz\external\opus\src\tansig_table.h" />
+    <ClInclude Include="..\..\external\krkrz\msg\MsgIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\msg\MsgIntfInc.h" />
+    <ClInclude Include="..\..\external\krkrz\sound\AudioDevice.h" />
+    <ClInclude Include="..\..\external\krkrz\sound\MathAlgorithms.h" />
+    <ClInclude Include="..\..\external\krkrz\sound\PhaseVocoderDSP.h" />
+    <ClInclude Include="..\..\external\krkrz\sound\PhaseVocoderFilter.h" />
+    <ClInclude Include="..\..\external\krkrz\sound\QueueSoundBufferImpl.h" />
+    <ClInclude Include="..\..\external\krkrz\sound\RealFFT.h" />
+    <ClInclude Include="..\..\external\krkrz\sound\RingBuffer.h" />
+    <ClInclude Include="..\..\external\krkrz\sound\SoundBufferBaseImpl.h" />
+    <ClInclude Include="..\..\external\krkrz\sound\SoundBufferBaseIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\sound\SoundDecodeThread.h" />
+    <ClInclude Include="..\..\external\krkrz\sound\SoundEventThread.h" />
+    <ClInclude Include="..\..\external\krkrz\sound\SoundPlayer.h" />
+    <ClInclude Include="..\..\external\krkrz\sound\SoundSamples.h" />
+    <ClInclude Include="..\..\external\krkrz\sound\WaveIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\sound\WaveLoopManager.h" />
+    <ClInclude Include="..\..\external\krkrz\sound\WaveSegmentQueue.h" />
+    <ClInclude Include="..\..\external\krkrz\sound\xmmlib.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjs.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjs.tab.hpp" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsArray.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsBinarySerializer.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsByteCodeLoader.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsCommHead.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsCompileControl.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsConfig.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsConstArrayData.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsDate.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsdate.tab.hpp" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsDateParser.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsDebug.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsDictionary.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsError.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsErrorDefs.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsErrorInc.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsException.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsGlobalStringMap.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsHashSearch.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsInterCodeExec.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsInterCodeGen.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsInterface.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsLex.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsMath.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsMessage.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsMT19937ar-cok.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsNamespace.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsNative.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsObject.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsObjectExtendable.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsOctPack.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjspp.tab.hpp" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsRandomGenerator.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsRegExp.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsScriptBlock.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsScriptCache.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsString.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsTypes.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsUtils.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsVariant.h" />
+    <ClInclude Include="..\..\external\krkrz\tjs2\tjsVariantString.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\ClipboardIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\cp932_uni.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\Debugger.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\DebugIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\Exception.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\FilePathUtil.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\md5.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\NativeFile.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\ObjectList.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\Random.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\StringUtil.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\ThreadIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\TickCount.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\TimerIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\TimerThread.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\TVPTimer.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\uni_cp932.h" />
+    <ClInclude Include="..\..\external\krkrz\utils\VelocityTracker.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\argb.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\BitmapIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\BitmapLayerTreeOwner.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\CharacterData.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\ComplexRect.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\drawable.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\DrawDevice.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\FontRasterizer.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\FontSystem.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\FreeType.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\FreeTypeFace.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\FreeTypeFontRasterizer.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\gl\aligned_allocator.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\gl\blend_functor_avx2.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\gl\blend_functor_c.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\gl\blend_functor_sse2.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\gl\blend_ps_functor_sse2.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\gl\blend_util_func.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\gl\blend_variation.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\gl\interpolation_functor_sse2.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\gl\ResampleImage.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\gl\ResampleImageInternal.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\gl\simd_def_x86x64.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\gl\sse_mathfun.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\gl\tvpgl_mathutil.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\gl\WeightFunctor.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\gl\WeightFunctorAVX.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\gl\WeightFunctorSSE.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\gl\x86simdutil.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\GraphicsLoaderIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\GraphicsLoadThread.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\ImageFunction.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\LayerBitmapImpl.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\LayerBitmapIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\LayerIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\LayerManager.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\LayerTreeOwner.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\LayerTreeOwnerImpl.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\NullDrawDevice.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\PrerenderedFont.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\RectItf.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\SaveTLG.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\transhandler.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\TransIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\TVPColor.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\tvpfontstruc.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\tvpgl.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\tvpinputdefs.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\VideoOvlIntf.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\voMode.h" />
+    <ClInclude Include="..\..\external\krkrz\visual\WindowIntf.h" />
+    <ClInclude Include="..\..\external\ncbind\ncbind.hpp" />
+    <ClInclude Include="..\..\external\ncbind\ncb_foreach.h" />
+    <ClInclude Include="..\..\external\ncbind\ncb_invoke.hpp" />
+    <ClInclude Include="..\..\external\SDL\include\begin_code.h" />
+    <ClInclude Include="..\..\external\SDL\include\close_code.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_assert.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_atomic.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_audio.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_bits.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_blendmode.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_clipboard.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_config.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_config_android.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_config_emscripten.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_config_iphoneos.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_config_macosx.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_config_minimal.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_config_os2.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_config_pandora.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_config_psp.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_config_windows.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_config_winrt.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_config_wiz.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_copying.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_cpuinfo.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_egl.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_endian.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_error.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_events.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_filesystem.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_gamecontroller.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_gesture.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_haptic.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_hidapi.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_hints.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_joystick.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_keyboard.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_keycode.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_loadso.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_locale.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_log.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_main.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_messagebox.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_metal.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_misc.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_mouse.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_mutex.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_name.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_opengl.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_opengles.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_opengles2.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_opengles2_gl2.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_opengles2_gl2ext.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_opengles2_gl2platform.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_opengles2_khrplatform.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_opengl_glext.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_pixels.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_platform.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_power.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_quit.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_rect.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_render.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_revision.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_rwops.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_scancode.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_sensor.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_shape.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_stdinc.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_surface.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_system.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_syswm.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_test.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_test_assert.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_test_common.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_test_compare.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_test_crc32.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_test_font.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_test_fuzzer.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_test_harness.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_test_images.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_test_log.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_test_md5.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_test_memory.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_test_random.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_thread.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_timer.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_touch.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_types.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_version.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_video.h" />
+    <ClInclude Include="..\..\external\SDL\include\SDL_vulkan.h" />
+    <ClInclude Include="..\..\external\SDL\src\audio\directsound\SDL_directsound.h" />
+    <ClInclude Include="..\..\external\SDL\src\audio\disk\SDL_diskaudio.h" />
+    <ClInclude Include="..\..\external\SDL\src\audio\dummy\SDL_dummyaudio.h" />
+    <ClInclude Include="..\..\external\SDL\src\audio\SDL_audiodev_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\audio\SDL_audio_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\audio\SDL_sysaudio.h" />
+    <ClInclude Include="..\..\external\SDL\src\audio\SDL_wave.h" />
+    <ClInclude Include="..\..\external\SDL\src\audio\wasapi\SDL_wasapi.h" />
+    <ClInclude Include="..\..\external\SDL\src\audio\winmm\SDL_winmm.h" />
+    <ClInclude Include="..\..\external\SDL\src\core\windows\SDL_directx.h" />
+    <ClInclude Include="..\..\external\SDL\src\core\windows\SDL_hid.h" />
+    <ClInclude Include="..\..\external\SDL\src\core\windows\SDL_windows.h" />
+    <ClInclude Include="..\..\external\SDL\src\core\windows\SDL_xinput.h" />
+    <ClInclude Include="..\..\external\SDL\src\dynapi\SDL_dynapi.h" />
+    <ClInclude Include="..\..\external\SDL\src\dynapi\SDL_dynapi_overrides.h" />
+    <ClInclude Include="..\..\external\SDL\src\dynapi\SDL_dynapi_procs.h" />
+    <ClInclude Include="..\..\external\SDL\src\events\blank_cursor.h" />
+    <ClInclude Include="..\..\external\SDL\src\events\default_cursor.h" />
+    <ClInclude Include="..\..\external\SDL\src\events\imKStoUCS.h" />
+    <ClInclude Include="..\..\external\SDL\src\events\scancodes_darwin.h" />
+    <ClInclude Include="..\..\external\SDL\src\events\scancodes_linux.h" />
+    <ClInclude Include="..\..\external\SDL\src\events\scancodes_windows.h" />
+    <ClInclude Include="..\..\external\SDL\src\events\scancodes_xfree86.h" />
+    <ClInclude Include="..\..\external\SDL\src\events\SDL_clipboardevents_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\events\SDL_displayevents_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\events\SDL_dropevents_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\events\SDL_events_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\events\SDL_gesture_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\events\SDL_keyboard_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\events\SDL_mouse_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\events\SDL_sysevents.h" />
+    <ClInclude Include="..\..\external\SDL\src\events\SDL_touch_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\events\SDL_windowevents_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\haptic\SDL_haptic_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\haptic\SDL_syshaptic.h" />
+    <ClInclude Include="..\..\external\SDL\src\haptic\windows\SDL_dinputhaptic_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\haptic\windows\SDL_windowshaptic_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\haptic\windows\SDL_xinputhaptic_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\joystick\controller_type.h" />
+    <ClInclude Include="..\..\external\SDL\src\joystick\hidapi\SDL_hidapijoystick_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\joystick\hidapi\SDL_hidapi_rumble.h" />
+    <ClInclude Include="..\..\external\SDL\src\joystick\SDL_gamecontrollerdb.h" />
+    <ClInclude Include="..\..\external\SDL\src\joystick\SDL_joystick_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\joystick\SDL_sysjoystick.h" />
+    <ClInclude Include="..\..\external\SDL\src\joystick\usb_ids.h" />
+    <ClInclude Include="..\..\external\SDL\src\joystick\windows\SDL_dinputjoystick_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\joystick\windows\SDL_rawinputjoystick_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\joystick\windows\SDL_windowsjoystick_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\joystick\windows\SDL_xinputjoystick_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\libm\math_libm.h" />
+    <ClInclude Include="..\..\external\SDL\src\libm\math_private.h" />
+    <ClInclude Include="..\..\external\SDL\src\power\SDL_syspower.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\direct3d11\SDL_render_winrt.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\direct3d11\SDL_shaders_d3d11.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\direct3d\SDL_shaders_d3d.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\opengles2\SDL_gles2funcs.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\opengles2\SDL_shaders_gles2.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\opengles\SDL_glesfuncs.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\opengl\SDL_glfuncs.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\opengl\SDL_shaders_gl.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\SDL_d3dmath.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\SDL_sysrender.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\SDL_yuv_sw_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\software\SDL_blendfillrect.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\software\SDL_blendline.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\software\SDL_blendpoint.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\software\SDL_draw.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\software\SDL_drawline.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\software\SDL_drawpoint.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\software\SDL_render_sw_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\software\SDL_rotate.h" />
+    <ClInclude Include="..\..\external\SDL\src\render\software\SDL_triangle.h" />
+    <ClInclude Include="..\..\external\SDL\src\SDL_assert_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\SDL_dataqueue.h" />
+    <ClInclude Include="..\..\external\SDL\src\SDL_error_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\SDL_hints_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\SDL_internal.h" />
+    <ClInclude Include="..\..\external\SDL\src\sensor\dummy\SDL_dummysensor.h" />
+    <ClInclude Include="..\..\external\SDL\src\sensor\SDL_sensor_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\sensor\SDL_syssensor.h" />
+    <ClInclude Include="..\..\external\SDL\src\thread\SDL_systhread.h" />
+    <ClInclude Include="..\..\external\SDL\src\thread\SDL_thread_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\thread\windows\SDL_sysmutex_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\thread\windows\SDL_systhread_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\timer\SDL_timer_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\dummy\SDL_nullevents_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\dummy\SDL_nullframebuffer_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\dummy\SDL_nullvideo.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\SDL_blit.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\SDL_blit_auto.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\SDL_blit_copy.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\SDL_blit_slow.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\SDL_egl_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\SDL_pixels_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\SDL_rect_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\SDL_RLEaccel_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\SDL_shape_internals.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\SDL_sysvideo.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\SDL_vulkan_internal.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\SDL_yuv_c.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\windows\SDL_msctf.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\windows\SDL_vkeys.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\windows\SDL_windowsclipboard.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\windows\SDL_windowsevents.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\windows\SDL_windowsframebuffer.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\windows\SDL_windowskeyboard.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\windows\SDL_windowsmessagebox.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\windows\SDL_windowsmodes.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\windows\SDL_windowsmouse.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\windows\SDL_windowsopengl.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\windows\SDL_windowsopengles.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\windows\SDL_windowsshape.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\windows\SDL_windowstaskdialog.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\windows\SDL_windowsvideo.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\windows\SDL_windowsvulkan.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\windows\SDL_windowswindow.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\windows\wmmsg.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\yuv2rgb\yuv_rgb.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\yuv2rgb\yuv_rgb_sse_func.h" />
+    <ClInclude Include="..\..\external\SDL\src\video\yuv2rgb\yuv_rgb_std_func.h" />
+    <ClInclude Include="..\..\external\zlib\crc32.h" />
+    <ClInclude Include="..\..\external\zlib\deflate.h" />
+    <ClInclude Include="..\..\external\zlib\gzguts.h" />
+    <ClInclude Include="..\..\external\zlib\inffast.h" />
+    <ClInclude Include="..\..\external\zlib\inffixed.h" />
+    <ClInclude Include="..\..\external\zlib\inflate.h" />
+    <ClInclude Include="..\..\external\zlib\inftrees.h" />
+    <ClInclude Include="..\..\external\zlib\trees.h" />
+    <ClInclude Include="..\..\external\zlib\zconf.h" />
+    <ClInclude Include="..\..\external\zlib\zlib.h" />
+    <ClInclude Include="..\..\external\zlib\zutil.h" />
+    <ClInclude Include="..\..\src\core\base\sdl2\AndroidAssetManager.h" />
+    <ClInclude Include="..\..\src\core\base\sdl2\FileSelector.h" />
+    <ClInclude Include="..\..\src\core\base\sdl2\FuncStubs.h" />
+    <ClInclude Include="..\..\src\core\base\sdl2\NativeEventQueue.h" />
+    <ClInclude Include="..\..\src\core\base\sdl2\PluginImpl.h" />
+    <ClInclude Include="..\..\src\core\base\sdl2\StorageImpl.h" />
+    <ClInclude Include="..\..\src\core\base\sdl2\SysInitImpl.h" />
+    <ClInclude Include="..\..\src\core\base\sdl2\SystemImpl.h" />
+    <ClInclude Include="..\..\src\core\environ\sdl2\Application.h" />
+    <ClInclude Include="..\..\src\core\environ\sdl2\ApplicationSpecialPath.h" />
+    <ClInclude Include="..\..\src\core\environ\sdl2\DetectCPU.h" />
+    <ClInclude Include="..\..\src\core\environ\sdl2\SystemControl.h" />
+    <ClInclude Include="..\..\src\core\environ\sdl2\TVPWindow.h" />
+    <ClInclude Include="..\..\src\core\environ\sdl2\VirtualKey.h" />
+    <ClInclude Include="..\..\src\core\msg\sdl2\MsgImpl.h" />
+    <ClInclude Include="..\..\src\core\sdl2\SDLBitmapCompletion.h" />
+    <ClInclude Include="..\..\src\core\sdl2\SDLPrecompiledHeader.h" />
+    <ClInclude Include="..\..\src\core\sdl2\SDLPrecompiledHeader.hpp" />
+    <ClInclude Include="..\..\src\core\sound\sdl2\WaveImpl.h" />
+    <ClInclude Include="..\..\src\core\sound\sdl2\WaveMixer.h" />
+    <ClInclude Include="..\..\src\core\visual\sdl2\BasicDrawDevice.h" />
+    <ClInclude Include="..\..\src\core\visual\sdl2\BitmapBitsAlloc.h" />
+    <ClInclude Include="..\..\src\core\visual\sdl2\BitmapInfomation.h" />
+    <ClInclude Include="..\..\src\core\visual\sdl2\DInputMgn.h" />
+    <ClInclude Include="..\..\src\core\visual\sdl2\GraphicsLoaderImpl.h" />
+    <ClInclude Include="..\..\src\core\visual\sdl2\LayerImpl.h" />
+    <ClInclude Include="..\..\src\core\visual\sdl2\NativeFreeTypeFace.h" />
+    <ClInclude Include="..\..\src\core\visual\sdl2\opengl\OpenGLHeaderSDL2.h" />
+    <ClInclude Include="..\..\src\core\visual\sdl2\opengl\OpenGLScreenSDL2.h" />
+    <ClInclude Include="..\..\src\core\visual\sdl2\TVPScreen.h" />
+    <ClInclude Include="..\..\src\core\visual\sdl2\TVPSysFont.h" />
+    <ClInclude Include="..\..\src\core\visual\sdl2\VideoOvlImpl.h" />
+    <ClInclude Include="..\..\src\core\visual\sdl2\VSyncTimingThread.h" />
+    <ClInclude Include="..\..\src\core\visual\sdl2\WindowImpl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\external\krglhwebp\libwebp\src\dec\Makefile.am" />
+    <None Include="..\..\external\krglhwebp\libwebp\src\dsp\Makefile.am" />
+    <None Include="..\..\external\krglhwebp\libwebp\src\enc\Makefile.am" />
+    <None Include="..\..\external\krglhwebp\libwebp\src\utils\Makefile.am" />
+    <None Include="..\..\external\krkrz\external\libogg\src\Makefile.am" />
+    <None Include="..\..\external\krkrz\external\libogg\src\Makefile.in" />
+    <None Include="..\..\external\krkrz\external\lpng\libpng.vcxproj.filters" />
+    <None Include="..\..\external\krkrz\visual\tvpps.inc" />
+    <None Include="..\..\src\core\base\sdl2\makestub.bat" />
+    <None Include="..\..\src\core\base\sdl2\makestub.pl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="readme_test.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
